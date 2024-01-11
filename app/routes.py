@@ -45,7 +45,7 @@ def get_book_by_isbn(isbn):
     
     books = books[books['ISBN'] == isbn]
     ratings = ratings[ratings['ISBN'].isin(books['ISBN'])]
-    ratings_count = [ratings.size]
+    ratings_count = [len(ratings.index)]
 
     if ratings_count[0] != 0:
         ratings = ratings.groupby('ISBN').mean().round(1)
