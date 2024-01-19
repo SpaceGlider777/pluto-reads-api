@@ -65,6 +65,6 @@ def search(str):
     '''
     Returns first 50 results that contain the string
     '''
-    results = books[books['Book-Title'].str.contains(str, case=False)]
+    results = books[books['Book-Title'].str.contains(str, case=False)].sort_values('Rating-Count', ascending=False)
 
     return results.head(50).to_json(orient='records')
