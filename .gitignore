@@ -2,3 +2,7 @@ __pycache__/
 venv/
 archive/
 .ipynb_checkpoints/
+books
+matrix
+model.pkl
+ratings
